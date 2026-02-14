@@ -19,7 +19,7 @@ A Node.js script using [Playwright](https://playwright.dev/) to scrape reviews f
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ediiloupatty/playwright-maps-google
    cd Maps
    ```
 
