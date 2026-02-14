@@ -2,23 +2,15 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 
 const urls = [
-    'https://maps.app.goo.gl/GjkLKCgRLAz7Wvc29',
-    'https://maps.app.goo.gl/9nbxTkXVrrTwf2xW7',
-    'https://maps.app.goo.gl/JiPL1N4rUs2M5mn1A',
-    'https://maps.app.goo.gl/KDrvPWB8GRaxNXBy7',
-    'https://maps.app.goo.gl/oBpRqNEW9ZAUMWtt8',
-    'https://maps.app.goo.gl/FjAgN6Dne1yQKQbp9',
-    'https://maps.app.goo.gl/QXmkEpZVLYwxnNrU7',
-    'https://maps.app.goo.gl/f9AweRF7XbdtNQ8N8',
-    'https://maps.app.goo.gl/oYNx1rerc6P37yZf8',
-    'https://maps.app.goo.gl/m1QEeWAaCMT67AHR6',
-    'https://maps.app.goo.gl/RG3mtEynRyp1euTE9',
-    'https://maps.app.goo.gl/yRxaLeNF1oPsqu7y6'
+    'link-maps-google1',
+    'link-maps-google2',
+    'link-maps-google3',
+    //and others
 ];
 
 (async () => {
     // Path to User Data Directory. We use the parent 'User Data' folder to access the 'Default' profile.
-    const userDataDir = 'C:\\Users\\ediloupatty\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data';
+    const userDataDir = 'C:\\Users\\username\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data';
 
     console.log("Launching Brave with persistent profile...");
     console.log("IMPORTANT: Please ensure all Brave windows are CLOSED before running this script.");
@@ -26,6 +18,7 @@ const urls = [
     // Launch browser with persistent context
     const context = await chromium.launchPersistentContext(userDataDir, {
         headless: false,
+        //i using brave browser
         executablePath: 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe',
         viewport: null // Use actual window size
     });
