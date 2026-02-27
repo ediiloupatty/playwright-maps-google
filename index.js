@@ -92,8 +92,9 @@ const urls = [
             let previousCount = 0;
             let sameCountSteps = 0;
             const MAX_RETRIES = 5;
+            let continueLoading = true;
 
-            while (true) {
+            while (continueLoading) {
                 const currentCount = await page.locator('div.jftiEf').count();
                 process.stdout.write(`\rLoaded reviews: ${currentCount}`);
 
